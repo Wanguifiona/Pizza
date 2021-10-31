@@ -10,9 +10,6 @@ Fiona Maina
 
 fiona.maina@student.moringaschool.com
 
-
-[![Pizza.png](---)](---)
-
 ## Technologies used
 
 * HTML
