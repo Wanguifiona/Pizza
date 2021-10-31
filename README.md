@@ -1,7 +1,6 @@
-#  Margherita Pizza
+#  Tutti Pizza
 
-This is a web application for Delani studio that shows the services, products and what Delani does for its users, a portfolio section and form that allows users to communicate with the studio
-
+This is a web application for order menu for Tutti Pizza place.Customers can order online by clicking the pizza menus,they can choose as many orders as they would like
 
 ### Author
 
