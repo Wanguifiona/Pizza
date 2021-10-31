@@ -1,0 +1,138 @@
+@import url('bootstrap.css');
+@import url('swiper.min.css');
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  }
+body{
+    background-color: white;
+  }
+.header{
+  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../images/cover.jpeg');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+}
+
+.logo img{
+  margin-left: 2%;
+  width: 50px;
+  height: 70px;
+  padding-top: 10px;
+}
+#im1{
+  height: 87%;
+}
+.box{
+  width: 70%;
+  margin-top: 2%;
+  margin-bottom: 0;
+  background-size: cover;
+}
+input[type="checkbox"]{
+margin-left: 10%;
+text-align: center;
+}
+
+h4{
+  color: white;
+  margin-left: 10%;
+  font-size: 38px;
+  text-align: center;
+  margin-top: 280px;
+}
+#def{
+  margin-top: 10%;
+  color: black;
+  font-size: 18px;
+}
+h5{
+  text-align: center;
+}
+.hdr{
+  position: absolute;
+  margin-left: 20%;
+  z-index: 1;
+  font-size: 30px;
+  font-weight: 500;
+  color: black;
+}
+.box label{
+  border: 1px solid white;
+  width: 85px;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  margin-left: 4%;
+  float: left;
+}
+.box select{
+  border-radius: 30px;
+  font-size: 20px;
+  margin-left: 17%;
+  margin-bottom: 3%;
+  text-align: center;
+}
+#your-orders{
+  margin-top: 5%;
+  font-size: 20px;
+  float: right;
+}
+  .col-md-4{
+    width: 50%;
+  }
+
+.col-md-4 img {
+  margin-top: 2%;
+  width: 100%;
+}
+
+.smt, .addPizza, .deliver,.checkout{
+margin-top: 5%;
+width: 50%;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 2%;
+margin-bottom: 2%;
+border-radius: 18px;
+}
+
+.pizzatable{
+  size: cover;
+  margin-top: 5%;
+  margin-left: 40%;
+}
+.butt{
+  display: none;
+  width: 100%;
+}
+.fb{
+  display: none;
+}
+.choise{
+  display: none;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.choice h2{
+  display: none;
+}
+.delivery{
+  display: none;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+#addedprice{
+  display: none;
+}
+#finallmessage{
+  display: none;
+  padding-top: 10%;
+  padding-right: 10%;
+  padding-left: 10%;
+  font-size: 28px;
+}
