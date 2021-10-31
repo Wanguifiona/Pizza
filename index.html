@@ -78,6 +78,58 @@
           </form>
         </div>
       </div>
+      <div class="container">
+      <div class="row">
+        <div class="choice">
+          <h2>Your Order;</h2>
+
+        <div id="your-orders">
+              <table class="table table-md  pizzatable">
+                <thead>
+                  <tr>
+                    <th scope="col">Order No.</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Crust</th>
+                    <th scope="col">Topping</th>
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tbody id="orders">
+                  <tr>
+                    <td id="nOrder"></td>
+                    <td id="pname"></td>
+                    <td id="sPizza"></td>
+                    <td id="cPizza"></td>
+                    <td id="tPizza"></td>
+                    <td id="totals"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <p id="totalPizza"></p>
+              <p id="bTotal"></p>
+              <p id="addedprice">Delivery will cost sh. 250</p>
+              <p id="fMessage"></p>
+            </div>
+          </div>
+          <div class="butt">
+            <button name="button" class="btn btn-secondary bg-secondary  addPizza">Add Pizza</button>
+            <button type="button" name="button" class="btn btn-secondary bg-secondary  checkout">Check Out</button>
+            <button type="button" name="button" class="btn btn-secondary deliver bg-secondary ">Delivery</button>
+          </div>
+              </div>
+              <div class="delivery">
+                  <form action="" id="form">
+                    <div class="form-group">
+                      <input type="text" id="name" class="form-control mb-3" >
+                      <input type="number" id="phone" class="form-control mb-3" >
+                      <input type="text" id="location" class="form-control mb-3" >
+                      <button class="btn btn-secondary bg-secondary " id="final-order">Confirm Order</button>
+                    </div>
+                  </form>
+              </div>
+      </div>
+    </div>
 
 
 
