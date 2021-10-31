@@ -1,6 +1,6 @@
 #  Tutti Pizza
 
-This is a web application for order menu for Tutti Pizza place.Customers can order online by clicking the pizza menus,they can choose as many orders as they would like
+This is a web application for Tutti pizza menu order.Customers can order online by clicking the pizza menus,they can choose as many orders as they would like.
 
 ### Author
 
@@ -27,14 +27,14 @@ fiona.maina@student.moringaschool.com
 * Open index.html on your Browser
 
 ### Behavior Driven Development
-//change later
 
-1. Display form for entering date & gender
+
+1. Display form for pick up delivery or door step delivery
   * Input: Enter users Name
   * Input: Enter users Email  
-  * Input: Enter users Message
-  * Output: send message to Delani studio and get a email confirming message is received
-2. Display an error message if Name ,Message and Email is left blank when  submitting
+  * Input: Enter users Mobile number
+  * Output: send message to customers with the total cost of the order and delivery charges.
+2. Display an error message if Name ,Number and Email is left blank when  submitting
    * Input:"Empty"
    * Output: "Name is not valid"
    * Output: "Email is not valid"
