@@ -61,7 +61,7 @@ $("button.smt").click(function(event) {
   $("button.checkout").click(function(event) {
   $("button.checkout").hide();
   $("button.addPizza").hide();
-  $("button.deliver").slideDown(1000);
+  $("button.deliver").slideDown(1250);
   $("#totalPizza").append("Your bill is ksh. " + checkOut);
 
   event.preventDefault();
@@ -73,12 +73,12 @@ $("button.smt").click(function(event) {
 $("button.deliver").click(function() {
   $(".pizzatable").hide();
   $(".choice h2").hide();
-  $(".delivery").slideDown(1000);
+  $(".delivery").slideDown(1250);
   $("#addedprice").hide();
   $("button.deliver").hide();
   $("#totalpizza").hide();
 
-  let deliveryAmount = checkOut + 150;
+  let deliveryAmount = checkOut + 200;
   $("#bTotal").append(
     "Your bill plus delivery fee is: " + deliveryAmount
   );
@@ -89,7 +89,7 @@ $("button#final-order").click(function(event) {
   $("#pizzatotal").hide();
   $(".delivery").hide();
   $("button#final-order").hide();
-  let dAmount = checkOut + 150;
+  let dAmount = checkOut + 200;
 
   let person = $("input#name").val();
   let phone = $("input#phone").val();
@@ -102,19 +102,19 @@ $("button#final-order").click(function(event) {
   ) {
     $("#fMessage").append(
       person +
-        ", We have recieved your order and the delivery wil be made  to  " +
+        ", Order recieved,delivery in half an hour " +
         location +
         ". Payment is ksh. " +
         dAmount
     );
     $("#bTotal").hide();
-    $("#fMessage").slideDown(1200);
+    $("#fMessage").slideDown(1500);
   } else {
-    alert("Please fill in the deliver details");
+    alert("Please try again");
     $(".delivery").show();
     $("button#final-order").show();
   }
-// event.preventDefault();
+
 });
 
 });

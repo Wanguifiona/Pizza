@@ -41,37 +41,35 @@
         </div>
       </div>
     </div>
+    <br>
+    <br>
     <div class="container">
       <div class="row">
       <form id="boxO" class="box form-group">
-            <hr>
             <div id="p1" class="fb">
-              <h5>Pizza Flavor</h5>
-              <select class="browser-default custom-select custom-select-md mb-3 name" name="">
+              <h5 class="text">Pizza Flavor</h5>
+              <select class="browser-default custom-select custom-select-md mb-3 name">
                   <option value="Fritta">Fritta</option>
                   <option value="Napoletana">Napoletana</option>
                   <option value="Siciliana">siciliana</option>
               </select>
               <br>
-              <h5>SIZE</h5>
-              <select class="browser-default custom-select custom-select-md mb-3 size" name="">
+              <h5 class="text">Size</h5>
+              <select class="browser-default custom-select custom-select-md mb-3 size">
                   <option value="750">small  - Kshs. 750</option>
                   <option value="1250">medium  - Kshs. 1250</option>
                   <option value="1500">large  - Kshs. 1500</option>
               </select>
               <br>
-              <hr>
-              <h5>CRUST</h5>
-
-              <select class="browser-default custom-select custom-select-md mb-3 crust" name="">
+              <h5 class="text">Crust</h5>
+              <select class="browser-default custom-select custom-select-md mb-3 crust">
                   <option value="200">Flat bread - Kshs. 200</option>
                   <option value="300">Stuffed - Kshs. 300</option>
                   <option value="400">Cheese - Kshs. 400</option>
               </select>
               <br>
-              <hr>
-              <h5>TOPPINGS</h5>
-              <select class="browser-default custom-select custom-select-md mb-3 topping" name="">
+              <h5 class="text">Toppings</h5>
+              <select class="browser-default custom-select custom-select-md mb-3 topping">
                 <option value="350">Mushroom - Kshs. 350</option>
                 <option value="250">Bacon - Kshs. 250</option>
                 <option value="450">Black olives - Kshs. 450</option>
@@ -85,18 +83,17 @@
       <div class="container">
       <div class="row">
         <div class="choice">
-          <h2>Your Order;</h2>
-
-        <div id="your-orders">
+          <h2>Your Order</h2>
+            <div id="your-orders">
               <table class="table table-md  pizzatable">
                 <thead>
                   <tr>
-                    <th scope="col">Order No.</th>
+                    <th scope="col">Order</th>
                     <th scope="col">Name</th>
                     <th scope="col">Size</th>
                     <th scope="col">Crust</th>
-                    <th scope="col">Topping</th>
-                    <th scope="col">Total</th>
+                    <th scope="col">Toppings</th>
+                    <th scope="col">Total cost</th>
                   </tr>
                 </thead>
                 <tbody id="orders">
@@ -112,7 +109,7 @@
               </table>
               <p id="totalPizza"></p>
               <p id="bTotal"></p>
-              <p id="addedprice">Delivery will cost sh. 250</p>
+              <p id="addedprice">Delivery will cost sh. 200</p>
               <p id="fMessage"></p>
             </div>
           </div>

@@ -36,7 +36,9 @@ input[type="checkbox"]{
 margin-left: 10%;
 text-align: center;
 }
-
+.text{
+  text-align: left;
+}
 h4{
   color: white;
   margin-left: 10%;
