@@ -39,8 +39,8 @@ text-align: center;
 .text{
   text-align: left;
 }
-.par{
-  text-align: center;
+.mb15{
+  margin-top: 2px;
 }
 h4{
   color: white;
