@@ -31,14 +31,10 @@ fiona.maina@student.moringaschool.com
   * Input: Enter users Email  
   * Input: Enter users Mobile number
   * Output: send message to customers with the total cost of the order and delivery charges.
-2. Display an error message if Name ,Number and Email is left blank when  submitting
+2. Display an error message if Name ,Number and location is left blank when  submitting
    * Input:"Empty"
-   * Output: "Name is not valid"
-   * Output: "Email is not valid"
-   * Output: "Message is not valid"
-
-
-
+   * Output: "Please try again"
+  
 ## Development
 
 Want to contribute? Great
