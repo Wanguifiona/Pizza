@@ -1,4 +1,3 @@
-
 let total = 0;
 let checkOut = 0;
 
