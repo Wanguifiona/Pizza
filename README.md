@@ -10,6 +10,11 @@ Fiona Maina
 
 fiona.maina@student.moringaschool.com
 
+
+[![pizza.png](https://i.postimg.cc/TwNCPPgq/Whats-App-Image-2021-11-08-at-11-05-50-PM.jpg)](https://postimg.cc/S28WTkZJ)
+
+
+
 ## Technologies used
 
 * HTML
@@ -34,7 +39,7 @@ fiona.maina@student.moringaschool.com
 2. Display an error message if Name ,Number and location is left blank when  submitting
    * Input:"Empty"
    * Output: "Please try again"
-  
+
 ## Development
 
 Want to contribute? Great
