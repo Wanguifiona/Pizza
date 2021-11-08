@@ -77,13 +77,10 @@ $(document).ready(function(){
 
 
        $('button#deliveryButton').click(function(){
-         let deliverAmount = grandTotal + 200
-         var name = prompt("Please enter your name:");
-         var phone = prompt("Your Phone number:");
-         var phone = prompt("Your location:");
-         alert("Your bill plus delivery fee is KES " + deliverAmount );
-         alert("Thank for picking Tutti and come again!")
-
+         let deliveryAmount = grandTotal + 200
+         $("p#message").css("display", "block");
+         $("span#amount").text(deliveryAmount);
+         console.log(grandTotal)
 
 
 

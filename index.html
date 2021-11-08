@@ -173,8 +173,24 @@
             <button class="btn btn-success btn-sm" id="checkoutButton">Checkout</button>
           </div>
           <div class="row" id="deliveryAmount">
+            <h1>Delivery</h1>
+            <div class="form">
+            <form>
+              <input type="text" name="full-name" placeholder="Full name" id="name">
+              <br>
+              <br>
+              <input type="number" name="number" placeholder="Phone number" id="number">
+              <br>
+              <br>
+              <input type="text" name="location" placeholder="Location" id="location">
+              <br>
+              <br>
+            </form>
+          </div>
+          <div class="msg">
+            <p id="message"> Your bill plus delivery fee is KES <span id="amount"></span> .Thank for picking Tutti and come again!</p>
+          </div>
             <div class="alert alert-light">
-              Delivery: KES <span></span>
               <br>
               <br>
               <button class="btn btn-success btn-sm" id="deliveryButton">Delivery</button>
