@@ -3,136 +3,201 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <title></title>
-  </head>
+    <title>Order</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/styles.css" >
+   </head>
   <body>
-    <div class="container-flex">
+    <div class="container-fluid">
+       <div class="row">
+         <div class="header">
+             <h4>>WELCOME TO TUTTI'S PIZZA<</h4>
+         </div>
+       </div>
+  </div>
+   <div class="container-fluid text-center ">
+        <h3>ABOUT US</h3>
+        <p>Tutti Pizza is a place you can get authentic pizza from italy.Cheese put in the pizza is imported from a small village in italy Positano that makes the worlds best cheese using ancient recepies which makes the pizza so good.</p>
+        <p>Every ingredient used to make the dishes are authentic Italian.</p>
+   </div>
+
+   <div class="landing">
+    <div class="box">
+      <div class="imgBox">
+        <img src="img/food1.jpeg" class="img-rescale">
+      </div>
+      <div class="details">
+        <div class="content">
+          <h5>Napoletana</h5>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBox">
+        <img src="img/food3.jpg" class="img-rescale">
+      </div>
+      <div class="details">
+        <div class="content">
+          <h5>Tonda Romana</h5>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBox">
+        <img src="img/food4.jpeg" class="img-rescale">
+      </div>
+      <div class="details">
+        <div class="content">
+          <h5>Fritta</h5>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBox">
+        <img src="img/food16.jpeg" class="img-rescale">
+      </div>
+      <div class="details">
+        <div class="content">
+          <h5>Siciliana</h5>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBox">
+        <img src="img/food22.jpg" class="img-rescale">
+      </div>
+      <div class="details">
+        <div class="content">
+          <h5>Al Padellino</h5>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBox">
+        <img src="img/food19.jpg" class="img-rescale">
+      </div>
+      <div class="details">
+        <div class="content">
+          <h5>Al Taglio</h5>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBox">
+        <img src="img/food13.jpeg" class="img-rescale">
+      </div>
+      <div class="details">
+        <div class="content">
+          <h5>Alla Pata</h5>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBox">
+        <img src="img/food14.jpeg" class="img-rescale">
+      </div>
+      <div class="details">
+        <div class="content">
+          <h5>Quattro Stagioni</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+    <br>
+    <br>
+    <br>
+    <hr>
+
+    <div class="container">
       <div class="row">
-        <div class="header">
-          <div class="logo">
-          <img src="img/logo.jpg">
+        <div class="col">
+           <h3>Flavor</h3>
+           <select class="form-control pizza-flavor">
+             <option>-Select-</option>
+             <option>Napoletana</option>
+             <option>Tonda Romana</option>
+             <option>Al Toglio</option>
+             <option>Fritta</option>
+             <option>Siciliana</option>
+             <option>Al Padellino</option>
+             <option>Alla Pata</option>
+           </select>
+        </div>
+        <div class="col">
+           <h3>Size</h3>
+           <select class="form-control pizza-size">
+             <option>-Select-</option>
+             <option value="1500">Large</option>
+             <option value="1250">Medium</option>
+             <option value="750 ">Small</option>
+           </select>
+        </div>
+        <div class="col">
+          <h3>Crust</h3>
+          <select class="form-control pizza-crust">
+            <option>-Select-</option>
+            <option value="300">Stuffed</option>
+            <option value="200">Thin</option>
+            <option value="150">Cheese</option>
+            <option value="100">Flat-bread</option>
+          </select>
+        </div>
+        <div class="col">
+          <h3>Toppings</h3>
+          <select class="form-control pizza-toppings">
+            <option>-Select-</option>
+            <option value="300">Mushrooms</option>
+            <option value="400">Bacon</option>
+            <option value="350 ">Black Olives</option>
+            <option value="250 ">Extra Cheese</option>
+          </select>
+        </div>
+      </div>
+      <div class="col text-center mt-20">
+        <button id="orderButton" class="btn btn-sm btn-secondary">Order</button>
+        <button id="orderAnotherButton" class="btn btn-sm btn-secondary">Another Order</button>
+      </div>
+      <hr>
+        <div class="row">
+          <div class="col-md-12 pizza-orders">
+            <h3>Selected Items</h3>
+            <p>Display</p>
+            <p>Order No: <span id="orderNo"></span> Flavor: <span id="flavor"></span>  Size: <span id="size"></span>  Crust: <span id="crust"></span> Toppings: <span id="toppings"></span> <strong>Total: <span id="total"></span> </strong></p>
           </div>
-            <h4>>Welcome to Tutti Pizza</h4>
         </div>
-      </div>
-    </div>
-    <h5 id="def">Click pizza to select your order</h5>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <a href="#form">
-          <img id="im1" src="img/food6.jpeg">
-          </a>
-          <h5 class="hdr">Fritta</h5>
-        </div>
-        <div class="col-md-4">
-          <a href="#form">
-          <img id="im2" src="img/food12.jpg">
-        </a>
-          <h5  class="hdr">Napoletana</h5>
-        </div>
-        <div class="col-md-4">
-          <a href="#form">
-          <img id="im3" src="img/food11.jpeg">
-        </a>
-          <h5 class="hdr">Siciliano</h5>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-    <div class="container">
-      <div class="row">
-      <form id="form" class="box form-group">
-            <div id="p1" class="fb">
-              <h5 class="text">Pizza Flavor</h5>
-              <select class="browser-default custom-select custom-select-md mb-3 name">
-                  <option value="Fritta">Fritta</option>
-                  <option value="Napoletana">Napoletana</option>
-                  <option value="Siciliana">siciliana</option>
-              </select>
+        <div class="row" id="grandTotal">
+          <div class="alert alert-light">
+            Grand total: KES <span></span>
+            <br>
+            <br>
+            <button class="btn btn-success btn-sm" id="checkoutButton">Checkout</button>
+          </div>
+          <div class="row">
+            <div class="alert alert-light">
+              Delivery: KES <span></span>
               <br>
-              <h5 class="text">Size</h5>
-              <select class="browser-default custom-select custom-select-md mb-3 size">
-                  <option value="750">small  - Kshs. 750</option>
-                  <option value="1250">medium  - Kshs. 1250</option>
-                  <option value="1500">large  - Kshs. 1500</option>
-              </select>
               <br>
-              <h5 class="text">Crust</h5>
-              <select class="browser-default custom-select custom-select-md mb-3 crust">
-                  <option value="200">Flat bread - Kshs. 200</option>
-                  <option value="300">Stuffed - Kshs. 300</option>
-                  <option value="400">Cheese - Kshs. 400</option>
-              </select>
-              <br>
-              <h5 class="text">Toppings</h5>
-              <select class="browser-default custom-select custom-select-md mb-3 topping">
-                <option value="350">Mushroom - Kshs. 350</option>
-                <option value="250">Bacon - Kshs. 250</option>
-                <option value="450">Black olives - Kshs. 450</option>
-                <option value="250">Cheese - Kshs. 250</option>
-              </select>
-              <br>
-              <button  class="smt btn btn-secondary bg-secondary" name="button">SELECT</button>
-          </form>
-        </div>
-      </div>
-      <div class="container">
-      <div class="row">
-        <div class="choice">
-          <h2>Your Order</h2>
-            <div id="your-orders">
-              <table class="table table-md  pizzatable">
-                <thead>
-                  <tr>
-                    <th scope="col">Order</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Size</th>
-                    <th scope="col">Crust</th>
-                    <th scope="col">Toppings</th>
-                    <th scope="col">Total cost</th>
-                  </tr>
-                </thead>
-                <tbody id="orders">
-                  <tr>
-                    <td id="nOrder"></td>
-                    <td id="pname"></td>
-                    <td id="sPizza"></td>
-                    <td id="cPizza"></td>
-                    <td id="tPizza"></td>
-                    <td id="totals"></td>
-                  </tr>
-                </tbody>
-              </table>
-              <p id="totalPizza"></p>
-              <p id="bTotal"></p>
-              <p id="addedprice">Delivery will cost sh. 200</p>
-              <p id="fMessage"></p>
+              <button class="btn btn-success btn-sm" id="deliveryButton">Delivery</button>
+              <button class="btn btn-success btn-sm" id="PickupButton">Pick Up</button>
             </div>
           </div>
-          <div class="butt">
-            <button name="button" class="btn btn-secondary bg-secondary  addPizza">Add Pizza</button>
-            <button type="button" name="button" class="btn btn-secondary bg-secondary  checkout">Check Out</button>
-            <button type="button" name="button" class="btn btn-secondary deliver bg-secondary ">Delivery</button>
-          </div>
-              </div>
-              <div class="delivery">
-                  <form action="" id="form">
-                    <div class="form-group">
-                      <input type="text" id="name" class="form-control mb-3" placeholder="Your Name">
-                      <input type="number" id="phone" class="form-control mb-3" placeholder="Your Mobile Number" >
-                      <input type="text" id="location" class="form-control mb-3" placeholder="Your Location">
-                      <button class="btn btn-secondary bg-secondary " id="final-order">Confirm Order</button>
-                    </div>
-                  </form>
-              </div>
+        </div>
+    </div>
+    <div class="contact-wrap text-center">
+      <div class="contact-in">
+        <h2>Contact Info</h2>
+        <h3>Phone</h3>
+        <p> 111 222 333 444</p>
+        <h3>Email</h3>
+        <p>info@pizzzademo.com</p>
+        <h3>Address</h3>
+        <p>Upperhill,Nairobi</p>
+      </div>
+      <div class="contact-int">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.169507761371!2d36.80754152806401!3d-1.2993677347621615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10e7afcbe647%3A0x8c73172faa633890!2sUpper%20Hill%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1636292397086!5m2!1sen!2ske" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
-         <script src="js/jquery-3.6.0.js"></script>
-        <script src="js/swiper.min.js"></script>
-        <script src="js/scripts.js"></script>
-      </body>
-    </html>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

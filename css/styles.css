@@ -1,6 +1,8 @@
-@import url('bootstrap.css');
-@import url('swiper.min.css');
 
+
+.mt-20 {
+   margin-top: 20px
+}
 *{
   padding: 0;
   margin: 0;
@@ -15,129 +17,117 @@ body{
   background-size: cover;
   width: 100%;
   height: 60vh;
-}
-
-.logo img{
-  margin-left: 2%;
-  width: 50px;
-  height: 70px;
-  padding-top: 10px;
-}
-#im1{
-  height: 87%;
-}
-.box{
-  width: 70%;
-  margin-top: 2%;
-  margin-bottom: 0;
-  background-size: cover;
-}
-input[type="checkbox"]{
-margin-left: 10%;
-text-align: center;
-}
-.text{
-  text-align: left;
-}
-.mb15{
-  margin-top: 10px;
+  padding-top: 500px;
 }
 h4{
   color: white;
   margin-left: 10%;
   font-size: 38px;
   text-align: center;
-  margin-top: 280px;
+  margin-top: auto;
 }
-#def{
-  margin-top: 10%;
-  color: black;
-  font-size: 18px;
+
+body{
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: sans-serif;
 }
-h5{
-  text-align: center;
+.landing{
+  width: 1280px;
+  margin: 70px auto 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-.hdr{
+.landing .box{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: white;
+  margin: 5px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.landing .box .imgBox{
+  position: relative;
+                       //remover this or return overflowhidden
+}
+.landing .box .imgBox img{   //incase of problem start here
+
+  transition:transform 2s;
+}
+.landing .box:hover .imgBox img{
+  transform: scale(1.2);
+}
+.landing .box .details{
+position: absolute;
+top: 10px;
+left: 10px;
+bottom: 10px;
+right: 10px;
+background: rgba(0, 0, 0, 0.5);
+transform: scaleY(0);
+transition: transform .5s;
+
+}
+.landing .box:hover .details{
+  transform: scaleY(1);
+
+
+}
+.landing .box .details .content{
   position: absolute;
-  margin-left: 20%;
-  z-index: 1;
-  font-size: 30px;
-  font-weight: 500;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 15px;
+  color: #fff;
+}
+.landing .box .details h5{
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: white;
+}
+
+.img-rescale {
+  width: 260px;
+  height: auto;
+}
+.contact-wrap{
+  width: 80%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact-in{
+  padding: 40px 30px;
+  flex: 30%;
+  background-image: url('../img/back.jpg');
+  background-repeat:no-repeat;
+  color: white;
+  background-position: center;
+
+
+}
+.contact-in h2{
+  font-size: 24px;
   color: black;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 20px;
+
 }
-.box label{
-  border: 1px solid white;
-  width: 85px;
-  text-align: center;
-  margin-top: 5%;
-  margin-bottom: 3%;
-  margin-left: 4%;
-  float: left;
-}
-.box select{
-  border-radius: 30px;
+.contact-in h3{
   font-size: 20px;
-  margin-left: 17%;
-  margin-bottom: 3%;
-  text-align: center;
+  color: black;
+  font-weight: 400;
+  margin-bottom: 15px
 }
-#your-orders{
-  margin-top: 5%;
-  font-size: 20px;
-  float: right;
-}
-  .col-md-4{
-    width: 50%;
-  }
-
-.col-md-4 img {
-  margin-top: 2%;
-  width: 100%;
-}
-
-.smt, .addPizza, .deliver,.checkout{
-margin-top: 5%;
-width: 50%;
-display: block;
-margin-left: auto;
-margin-right: auto;
-margin-top: 2%;
-margin-bottom: 2%;
-border-radius: 18px;
-}
-
-.pizzatable{
-  size: cover;
-  margin-top: 5%;
-  margin-left: 40%;
-}
-.butt{
-  display: none;
-  width: 100%;
-}
-.fb{
-  display: none;
-}
-.choise{
-  display: none;
-  padding-left: 2%;
-  padding-right: 2%;
-}
-.choice h2{
-  display: none;
-}
-.delivery{
-  display: none;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-#addedprice{
-  display: none;
-}
-#finallmessage{
-  display: none;
-  padding-top: 10%;
-  padding-right: 10%;
-  padding-left: 10%;
-  font-size: 28px;
+.contact-int iframe{
+  align-content: center;
+   width: 100%;
+   height: 100%;
 }

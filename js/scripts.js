@@ -1,134 +1,94 @@
-let total = 0;
-let checkOut = 0;
-
-function GetPizza(name, size, crust, topping, total) {
-  this.name = name;
-  this.size = size;
-  this.crust = crust;
-  this.topping = topping;
-  this.total = total;
+// Constructor
+function Pizza(flavor, size, crust, toppings, total, orderNo){
+    this.flavor = flavor
+    this.size = size;
+    this.crust =  crust;
+    this.toppings = toppings;
+    this.total = total;
+    this.orderNo = orderNo;
 }
-$("button.smt").click(function(event) {
-  let pname=$(".name option:selected").val();
-  let psize = $(".size option:selected").val();
-  let pcrust = $(".crust option:selected").val();
-  let ptopping = $(".topping option:selected").val();
 
-  let nOrder = 0;
-
-  total = parseInt(psize) + parseInt(pcrust) + parseInt(ptopping);
-  nOrder = +1;
-  checkOut = checkOut + total;
-
-  $("#nOrder").html(nOrder);
-  $("#pname").html($(".name option:selected").val());
-  $("#sPizza").html($(".size option:selected").val());
-  $("#cPizza").html($(".crust option:selected").val());
-  $("#tPizza").html($(".topping option:selected").val());
-  $("#totals").html(total);
-
-  $("button.addPizza").click(function(event) {
-    let pname=$(".name option:selected").val();
-    let psize = $(".size option:selected").val();
-    let pcrust = $(".crust option:selected").val();
-    let ptopping = $(".topping option:selected").val();
-
-    total = parseInt(psize) + parseInt(pcrust) + parseInt(ptopping);
-
-    checkOut = checkOut + total;
-    nOrder = nOrder +1;
-    newOrder = new GetPizza(pname, psize, pcrust, ptopping, total);
-
-    $("#orders").append(
-      `<tr><td id="nOrder">` +
-        nOrder +
-      `</td><td id="pname">` +
-        newOrder.name +
-        `</td><td id="sPizza"> ` +
-        newOrder.size +
-        `</td><td id="cPizza"> ` +
-        newOrder.crust +
-        `</td><td id="tPizza"> ` +
-        newOrder.topping +
-        `</td><td id="totals"> ` +
-        newOrder.total +
-        `</td></tr>`
-    );
-    event.preventDefault();
-});
-
-  $("button.checkout").click(function(event) {
-  $("button.checkout").hide();
-  $("button.addPizza").hide();
-  $("button.deliver").slideDown(1250);
-  $("#totalPizza").append("Your bill is ksh. " + checkOut);
-
-  event.preventDefault();
-});
-
-  event.preventDefault();
+// Create instances of the Pizza object
+let firstPizza = new Pizza("Napoletana", "large", "crispy", "pepperoni", 1200, 1);
+let secondPizza = new Pizza("Fritta", "medium", "gluten-free", "cheese", 800, 2);
+let thirdPizza = new Pizza("Siciliana", "small", "thin", "bacon", 500, 3);
 
 
-$("button.deliver").click(function() {
-  $(".pizzatable").hide();
-  $(".choice h2").hide();
-  $(".delivery").slideDown(1250);
-  $("#addedprice").hide();
-  $("button.deliver").hide();
-  $("#totalpizza").hide();
+Pizza.prototype.myOrderDetails = function() {
+   console.log("Your order has been received for a " +  this.flavor  +  this.size  + " Pizza, with a "  +  this.crust  +  " crust with a "  +  this.toppings + " topping!")
+}
 
-  let deliveryAmount = checkOut + 200;
-  $("#bTotal").append(
-    "Your bill plus delivery fee is: " + deliveryAmount
-  );
-});
 
-$("button#final-order").click(function(event) {
-  event.preventDefault();
-  $("#pizzatotal").hide();
-  $(".delivery").hide();
-  $("button#final-order").hide();
-  let dAmount = checkOut + 200;
+//UI
+$(document).ready(function(){
 
-  let person = $("input#name").val();
-  let phone = $("input#phone").val();
-  let location = $("input#location").val();
+    $('#orderAnotherButton, .pizza-orders, #grandTotal' ).hide();
 
-  if (
-    $("input#name").val() &&
-    $("input#phone").val() &&
-    $("input#location").val() != ""
-  ) {
-    $("#fMessage").append(
-      person +
-        ", Order recieved,delivery in half an hour " +
-        location +
-        ". Payment is ksh. " +
-        dAmount
-    );
-    $("#bTotal").hide();
-    $("#fMessage").slideDown(1500);
-  } else {
-    alert("Please try again");
-    $(".delivery").show();
-    $("button#final-order").show();
-  }
+  $('button#orderButton').click(function(){
+    var flavorOfPizza = $('.pizza-flavor option:selected').val(); //get value from the pizza-flavor selected option
+    var sizeOfPizza = $('.pizza-size option:selected').val(); //get value from the pizza-size selected option
+    var crustOfPizza = $('.pizza-crust option:selected').val(); //get value from the pizza-crust selected option
+    var toppingsOfPizza = $('.pizza-toppings option:selected').val(); //get value from the pizza-toppings selected option
 
-});
+    var total = parseInt(sizeOfPizza) + parseInt(crustOfPizza) + parseInt(toppingsOfPizza); //get the Total amount of the pizza
+    var order = 1; //assign default order number
+    var grandTotal = 0; // for storing the total to be calculated
 
-});
-$('.col-md-4 #im1').click(function(){
-$('#p1').toggle(500);
-$('.choice h2').toggle(700);
-});
-$('.col-md-4 #im2').click(function(){
-$('#p1').toggle(500);
-$('.choice h2').toggle(700);
-});
-$('.col-md-4 #im3').click(function(){
-$('#p1').toggle(500);
-$('.choice h2').toggle(700);
-});
-$('.smt').click(function(){
-$('.butt').fadeIn(1000);
+    // Appending fetched values from the select options
+    $('#orderNo').html(order);
+    $('#flavor').html(flavorOfPizza);
+    $('#size').html($('.pizza-size option:selected').text() + " - " + sizeOfPizza );
+    $('#crust').html($('.pizza-crust option:selected').text() + " - " + crustOfPizza);
+    $('#toppings').html($('.pizza-toppings option:selected').text() + " - " + toppingsOfPizza);
+    $('#total').html(total);
+    grandTotal = grandTotal + total;
+
+    $('#grandTotal span').html(grandTotal); // Displaying the grand total in our alert
+
+    $('#orderButton').hide()
+    $('#orderAnotherButton, .pizza-orders, #grandTotal').show();
+
+
+    $('button#orderAnotherButton ').click(function(){
+      var flavorOfPizza = $('.pizza-flavor option:selected').val();
+      var sizeOfPizza = $('.pizza-size option:selected').val();
+      var crustOfPizza = $('.pizza-crust option:selected').val();
+      var toppingsOfPizza = $('.pizza-toppings option:selected').val();
+
+
+      var total = parseInt(sizeOfPizza) + parseInt(crustOfPizza) + parseInt(toppingsOfPizza);
+      order = order + 1;
+      grandTotal = grandTotal + total;
+      let newPizza = new Pizza(flavorOfPizza, sizeOfPizza, crustOfPizza, toppingsOfPizza, total, order);
+      let newPizzaOrder = '<p>Order No: <span id="orderNo">' + order + '</span> Flavor: <span id="flavor">' + newPizza.flavor + '</span>  Size: <span id="size">' +$('.pizza-size option:selected').text() + " - "  + newPizza.size + '</span>  Crust: <span id="crust">' + $('.pizza-crust option:selected').text() + " - " + newPizza.crust + '</span> Toppings: <span id="toppings">' + $('.pizza-toppings option:selected').text() + " - " + newPizza.toppings + '</span> <strong>Total: <span id="total">' + newPizza.total  + '</span> </strong></p>';
+
+      $('.pizza-orders').append(newPizzaOrder);
+      $('#grandTotal span').html(grandTotal);
+    });
+
+      $('button#checkoutButton').click(function(){
+        alert("Order received. Total amount is KES " + grandTotal);
+      });
+
+      $('button#PickupButton').click(function(){
+        alert("Your order will be ready for pickup in 20 mins. " + "Your bill is KES. " + grandTotal)
+        alert("Thank for picking Tutti and come again!")
+      })
+
+
+       $('button#deliveryButton').click(function(){
+         prompt("Please enter your name:")
+         prompt("Your Phone number:");
+         prompt("Your location:");
+         alert("Your bill plus delivery fee is KES " + grandTotal + 200 );
+         alert("Thank for picking Tutti and come again!")
+
+
+
+
+
+       });
+
+
+  });
 });
